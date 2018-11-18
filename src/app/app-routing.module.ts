@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SwitchesComponent } from './switches/switches.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/switches', pathMatch: 'full' },
   { path: "switches", component: SwitchesComponent }
 ];
 
