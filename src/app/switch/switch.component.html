@@ -1,8 +1,8 @@
 <div class="switch-container">
   <div class="switch-container-label">
-    <label>{{switch.text | uppercase}}</label>
+    <label>{{switch.id | uppercase}}</label>
   </div>
   <div class="switch-container-button">
-    <mat-button-toggle value="bold">ON</mat-button-toggle>
+    <mat-button-toggle value="bold" (click)="changeSwitchState(switch)">{{switch.state}}</mat-button-toggle>
   </div>
 </div>
