@@ -17,13 +17,13 @@ export class SwitchService {
   constructor(private http: HttpClient) { }
 
   getSwitches(): Observable<Switch[]> {
-    return this.http.get<SwitchesResponse>('http://192.168.1.12:8080/switches')
+    return this.http.get<SwitchesResponse>('http://192.168.4.1:8080/switches')
       .pipe(
         map(res => res.switchDetails)
       );
   }
 
   updateSwitchState(sw: Switch): Observable<Object> {
-    return this.http.post<SwitchesResponse>(`http://192.168.1.12:8080/switches/${sw.id}/state/${sw.state.toLowerCase()}`, null);
+    return this.http.post<SwitchesResponse>(`http://192.168.4.1:8080/switches/${sw.id}/state/${sw.state.toLowerCase()}`, null);
   }
 }
