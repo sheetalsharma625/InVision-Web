@@ -3,6 +3,6 @@
     <label>{{switch.id | uppercase}}</label>
   </div>
   <div class="switch-container-button">
-    <mat-button-toggle value="bold" (click)="changeSwitchState(switch)">{{switch.state}}</mat-button-toggle>
+    <button mat-button (click)="changeSwitchState(switch)" color="{{switch.state === 'ON'? 'accent' : 'primary'}}">{{switch.state}}</button>
   </div>
 </div>
